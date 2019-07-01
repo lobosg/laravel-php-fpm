@@ -1,6 +1,6 @@
-FROM php:7.1-fpm
+FROM php:7.2-fpm
 
-MAINTAINER Darwin Biler <buonzz@gmail.com>
+label MAINTAINER="buonzz@gmail.com"
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -15,9 +15,7 @@ RUN apt-get update \
     libmcrypt-dev \
   && rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install mcrypt \
-  # Install the PHP pdo_mysql extention
-  && docker-php-ext-install pdo_mysql \
+RUN docker-php-ext-install pdo_mysql \
   # Install the PHP pdo_pgsql extention
   && docker-php-ext-install pdo_pgsql \
   # Install the PHP gd library
