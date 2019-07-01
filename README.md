@@ -26,4 +26,3 @@ services:
 
 note that the example above assumes that the laravel application is in current directly. the volumes maps the current directory to "/var/www" folder inside the container, where the container expects the application is present.
 
-You can look at this sample app https://github.com/buonzz/laravel/blob/master/docker-compose.yml to see a real-world use-case of this.
