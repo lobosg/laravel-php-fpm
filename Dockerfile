@@ -1,6 +1,6 @@
-FROM php:7.2-fpm
+FROM php:7.3-fpm
 
-label MAINTAINER="buonzz@gmail.com"
+label MAINTAINER="guillermo@2x3.cl"
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
